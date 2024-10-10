@@ -1,11 +1,11 @@
 {
-    "name": "wordle",
-    "short_name": "wordle",
+    "name": "Wordly Plus",
+    "short_name": "WordlyPlus",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
+    "background_color": "#FFFFFF",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Guess the WORD in six tries",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
