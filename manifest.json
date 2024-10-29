@@ -1,11 +1,11 @@
 {
-    "name": "Wordly Plus",
-    "short_name": "WordlyPlus",
+    "name": "brave_component",
+    "short_name": "brave_component",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#FFFFFF",
+    "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Guess the WORD in six tries",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
