@@ -17199,10 +17199,10 @@ return A.R(a.vF(),$async$Te)
 case 3:p=d
 o=self.File
 n=A.a([p.buffer],t.sv)
-m=a.b
+m=b==null?a.b:b
 l={}
 k=a.a
-if(k==null){k=$.a2B().DY(m,p)
+if(k==null){k=$.a2B().DY(a.b,p)
 if(k==null)k="application/octet-stream"}l.type=k
 q=new o(n,m,l)
 s=1
@@ -17691,9 +17691,9 @@ q=s[1]
 s=s[2]
 p=b[2]
 return A.a([o*m+l*k+j*n,o*r+l*q+j*s,o*p[0]+l*p[1]+j*p[2]],t.n)},
-a14(a,b,c){var s=0,r=A.M(t.rc),q
-var $async$a14=A.N(function(d,e){if(d===1)return A.J(e,r)
-while(true)switch(s){case 0:q=$.a9q().eM(a,null,null,b,c)
+a14(a,b,c,d){var s=0,r=A.M(t.rc),q
+var $async$a14=A.N(function(e,f){if(e===1)return A.J(f,r)
+while(true)switch(s){case 0:q=$.a9q().eM(a,b,null,c,d)
 s=1
 break
 case 1:return A.K(q,r)}})
@@ -49615,7 +49615,7 @@ l.f=p
 m=self
 l.c=m.URL.createObjectURL(p)
 s=4
-return A.R(A.a14(A.a([l],t.uv),"hahhahhaha","Great picture"),$async$bM)
+return A.R(A.a14(A.a([l],t.uv),A.a(["nishishuifileNameOverrides"],t.s),"hahhahhaha","Greatpicture"),$async$bM)
 case 4:if(b.b===B.t4)A.v4("Thank you for sharing the picture!")
 l=q.c.af(t.Cu)
 l.toString
@@ -50440,7 +50440,7 @@ case 3:if(!(h<1)){s=5
 break}g=a[h]
 b=d
 s=6
-return A.R(A.Te(g,null),$async$eM)
+return A.R(A.Te(g,a0[h]),$async$eM)
 case 6:b.push(a6)
 case 4:++h
 s=3
@@ -50536,7 +50536,7 @@ Ld(a,b){var s=0,r=A.M(t.D7),q,p=this,o,n,m
 var $async$ra=A.N(function(c,d){if(c===1)return A.J(d,r)
 while(true)switch(s){case 0:m=A.a([],t.vd)
 for(o=0;o<1;++o){n=a[o]
-m.push(p.kQ(n,null))}q=A.oS(m,t.Bx)
+m.push(p.kQ(n,b[o]))}q=A.oS(m,t.Bx)
 s=1
 break
 case 1:return A.K(q,r)}})
