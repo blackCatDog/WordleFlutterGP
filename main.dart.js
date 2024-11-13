@@ -17691,9 +17691,9 @@ q=s[1]
 s=s[2]
 p=b[2]
 return A.a([o*m+l*k+j*n,o*r+l*q+j*s,o*p[0]+l*p[1]+j*p[2]],t.n)},
-a14(a,b){var s=0,r=A.M(t.rc),q
-var $async$a14=A.N(function(c,d){if(c===1)return A.J(d,r)
-while(true)switch(s){case 0:q=$.a9q().eM(a,null,null,null,b)
+a14(a,b,c){var s=0,r=A.M(t.rc),q
+var $async$a14=A.N(function(d,e){if(d===1)return A.J(e,r)
+while(true)switch(s){case 0:q=$.a9q().eM(a,null,null,b,c)
 s=1
 break
 case 1:return A.K(q,r)}})
@@ -49615,7 +49615,7 @@ l.f=p
 m=self
 l.c=m.URL.createObjectURL(p)
 s=4
-return A.R(A.a14(A.a([l],t.uv),"Great picture"),$async$bM)
+return A.R(A.a14(A.a([l],t.uv),"hahhahhaha","Great picture"),$async$bM)
 case 4:if(b.b===B.t4)A.v4("Thank you for sharing the picture!")
 l=q.c.af(t.Cu)
 l.toString
@@ -50432,27 +50432,29 @@ A.QO.prototype={
 xj(a){$.vk().m(0,this,a)}}
 A.Td.prototype={
 eM(a,b,c,d,e){return this.FT(a,b,c,d,e)},
-FT(a0,a1,a2,a3,a4){var s=0,r=A.M(t.rc),q,p=2,o,n=this,m,l,k,j,i,h,g,f,e,d,c,b,a
-var $async$eM=A.N(function(a6,a7){if(a6===1){o=a7
-s=p}while(true)switch(s){case 0:c=A.a([],t.Ew)
+FT(a,a0,a1,a2,a3){var s=0,r=A.M(t.rc),q,p=2,o,n=this,m,l,k,j,i,h,g,f,e,d,c,b
+var $async$eM=A.N(function(a5,a6){if(a5===1){o=a6
+s=p}while(true)switch(s){case 0:d=A.a([],t.Ew)
 h=0
 case 3:if(!(h<1)){s=5
-break}g=a0[h]
-a=c
+break}g=a[h]
+b=d
 s=6
 return A.R(A.Te(g,null),$async$eM)
-case 6:a.push(a7)
+case 6:b.push(a6)
 case 4:++h
 s=3
 break
 case 5:m=null
-if(a4.length!==0){f={files:c,text:a4}
-m=f}else{f={files:c}
-m=f}l=null
-try{l=n.b.canShare(m)}catch(a5){d=A.ad(a5)
-if(t.dz.b(d)){k=d
+if(a3.length!==0)if(a2.length!==0)m={files:d,title:a2,text:a3}
+else m={files:d,text:a3}
+else if(a2.length!==0)m={files:d,title:a2}
+else m={files:d}
+l=null
+try{l=n.b.canShare(m)}catch(a4){e=A.ad(a4)
+if(t.dz.b(e)){k=e
 A.a7Z("Share API is not supported in this User Agent.",k)
-throw A.e(A.c8("Navigator.canShare() is unavailable"))}else throw a5}if(!l)throw A.e(A.c8("Navigator.canShare() is false"))
+throw A.e(A.c8("Navigator.canShare() is unavailable"))}else throw a4}if(!l)throw A.e(A.c8("Navigator.canShare() is false"))
 p=8
 s=11
 return A.R(A.eX(n.b.share(m),t.X),$async$eM)
@@ -50463,14 +50465,14 @@ p=2
 s=10
 break
 case 8:p=7
-b=o
-d=A.ad(b)
-if(t.v.b(d)){j=d
+c=o
+e=A.ad(c)
+if(t.v.b(e)){j=e
 i=j.name
 if("AbortError"===i){q=B.EX
 s=1
 break}A.a7Z("Failed to share files",A.n(j.name)+": "+A.n(j.message))
-throw A.e(A.c8("Navigator.share() failed: "+A.n(A.r(j,"message"))))}else throw b
+throw A.e(A.c8("Navigator.share() failed: "+A.n(A.r(j,"message"))))}else throw c
 s=10
 break
 case 7:s=2
@@ -50491,6 +50493,7 @@ j=k.df(m,new A.Pz(),l)
 i=A.U(j,!0,j.$ti.h("ap.E"))
 k=k.df(m,new A.PA(),l)
 o=A.aG(["paths",A.U(k,!0,k.$ti.h("ap.E")),"mimeTypes",i],l,t.z)
+o.m(0,"subject",d)
 o.m(0,"text",e)
 s=4
 return A.R(B.Co.hi("shareFiles",o,!1,l),$async$eM)
