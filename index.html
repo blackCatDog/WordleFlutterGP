@@ -30,6 +30,49 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="flutter_bootstrap.js" async>
+
+  </script>
+
+  <script>
+   function getSearchData(ssg){
+
+        //js调用android方法  传递参数
+
+        print(ssg)
+         const base64String = ssg.base64;
+      getSearchData(base64String);
+         }
+       function getSearchData(base64String) {
+      // 创建一个Blob对象
+      const byteCharacters = atob(base64String); // 解码Base64
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], {type: 'image/png'});
+
+      // 创建一个URL对象
+      const blobUrl = URL.createObjectURL(blob);
+
+      // 准备分享的文件数组
+      const filesArray = [new File([blob], 'image.png', {type: 'image/png'})];
+
+      // 检查是否可以分享文件
+      if (navigator.canShare && navigator.canShare({ files: filesArray })) {
+        navigator.share({
+          files: filesArray,
+          title: 'Vacation Pictures',
+          text: 'Photos from September 27 to October 14.',
+          url: 'http://www.baidu.com',
+        })
+        .then(() => console.log('Share was successful.'))
+        .catch((error) => console.log('Sharing failed', error));
+      } else {
+        console.log('Your system doesn\'t support sharing files.');
+      }
+    }
+  </script>
 </body>
 </html>
