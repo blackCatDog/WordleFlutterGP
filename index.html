@@ -40,8 +40,11 @@
         //js调用android方法  传递参数
 
         print(ssg)
-         const base64String = ssg.base64;
-      getSearchData(base64String);
+        //js调用android方法  传递参数
+        android.getMessage(ssg);
+    return result;
+<!--         const base64String = ssg.base64;-->
+<!--      getSearchData(base64String);-->
          }
        function getSearchData(base64String) {
       // 创建一个Blob对象
